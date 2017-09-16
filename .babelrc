@@ -1,4 +1,5 @@
 {
 	"presets": ["env"],
-	"plugins": []
+	"plugins": [],
+	"only": ["index.js", "src/*"]
 }

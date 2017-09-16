@@ -19,12 +19,13 @@
 		"rimraf": "^2.6.2"
 	},
 	"scripts": {
+		"compile": "babel . --out-dir dist --ignore=node_modules,dist",
+		"watch": "babel . --watch --out-dir dist --ignore=node_modules,dist",
 		"clean": "rimraf dist",
-		"compile": "babel index.js --out-file dist/index.js --source-maps",
-		"eslint": "eslint .",
-		"test": "babel-node ./src/file.test.js",
-		"dist": "npm run clean && mkdir dist && npm run compile",
+		"dist": "npm run clean && npm run compile",
 		"prepublishOnly": "npm run dist",
-		"pretest": "npm run eslint"
+		"eslint": "eslint .",
+		"pretest": "npm run eslint",
+		"test": "babel-node ./src/file.test.js"
 	}
 }
