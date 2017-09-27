@@ -1,2 +1,3 @@
+import { helloAndHelloWorld } from "./src/helloAndHelloWorld.js"
 
-export * from './src/index.js'
+console.log(helloAndHelloWorld)
